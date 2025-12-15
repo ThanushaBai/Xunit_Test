@@ -10,14 +10,16 @@
     <artifactId>Xunit_test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- Java version -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- JUnit Dependency -->
+    <!-- Dependencies -->
     <dependencies>
+        <!-- JUnit 5 (Jupiter) -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -26,16 +28,9 @@
         </dependency>
     </dependencies>
 
-    <!-- Plugins -->
+    <!-- Build plugins -->
     <build>
         <plugins>
-            <!-- Maven Surefire Plugin to run tests -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
-            </plugin>
-
             <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -45,6 +40,13 @@
                     <source>17</source>
                     <target>17</target>
                 </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin to run tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
             </plugin>
         </plugins>
     </build>
